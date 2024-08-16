@@ -8,7 +8,7 @@ import {
   streamUI,
   createStreamableValue
 } from 'ai/rsc'
-import { openai } from '@ai-sdk/openai'
+import { createOpenAI } from '@ai-sdk/openai';
 
 import {
   spinner,
@@ -35,6 +35,15 @@ import { saveChat } from '@/app/actions'
 import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat, Message } from '@/lib/types'
 import { auth } from '@/auth'
+
+const openai = createOpenAI({
+  compatibility: 'strict',
+  apiKey: process.env.OPENAI_API_KEY,
+  baseURL: 'https://gateway.usevelvet.com/api/openai/v1/',
+  headers: {
+    'velvet-auth': process.env.VELVET_API_KEY as string
+  }
+})
 
 async function confirmPurchase(symbol: string, price: number, amount: number) {
   'use server'
