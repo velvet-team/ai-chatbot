@@ -1,3 +1,9 @@
+**👋** This is a fork of [vercel/ai-chatbot](https://github.com/vercel/ai-chatbot) with Velvet enabled. As shown [in this commit](https://github.com/velvet-team/ai-chatbot/commit/d6fa03561000d44df08220797feda45c1382c037), you can add Velvet to your project with just a couple lines of code — no additional packages are necessary.
+
+For more information on setting up Velvet, see [our docs](https://docs.usevelvet.com/).
+
+---
+
 <a href="https://chat.vercel.ai/">
   <img alt="Next.js 14 and App Router-ready AI chatbot." src="https://chat.vercel.ai/opengraph-image.png">
   <h1 align="center">Next.js AI Chatbot</h1>
